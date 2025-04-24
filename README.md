@@ -1,10 +1,8 @@
-# 🚗 Automobile Inventory System (CSC320-1 Portfolio Milestone)
+# 🚗 Automobile Inventory System
 
 ## Overview
 
-This project is part of the **Module 6 Portfolio Milestone** for *CSC320-1: Programming I* at Colorado State University Global. The goal is to build a modular and object-oriented `Automobile` class to represent vehicles in a dealership inventory system. The class includes constructors, methods, encapsulated variables, and error-handling logic in preparation for a complete inventory program.
-
-The work submitted here will later be integrated into the **final portfolio project**, which will feature a fully interactive Java console application that manages an inventory of vehicles using lists and file storage.
+This project is a Java-based automobile inventory system designed to manage vehicle data using an object-oriented approach. The core class, `Automobile`, represents individual vehicles and includes functionality to add, update, remove, and list vehicle details. Each vehicle is assigned a unique ID for easy reference and manipulation. The class is structured with maintainability and modular design in mind and is ready for integration into a full inventory management system.
 
 ---
 
@@ -44,4 +42,4 @@ Each method includes **try/catch error handling** and returns a message string t
 
 ---
 
-## 📁 File Structure
+## 🧱 File Structure
