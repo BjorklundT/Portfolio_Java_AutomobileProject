@@ -51,3 +51,42 @@ vehicleinventory/
 │       └── Automobile.java        # Core class for vehicle logic (constructors, methods, encapsulation)
 │
 ├── README.md                      # Project overview and documentation
+
+---
+
+## 🔮 Future Development
+
+This project is designed to serve as the backend for a larger vehicle management system. Future features and expansions may include:
+
+- Creating an `AutomobileInventory` class to manage multiple vehicles
+- Using an `ArrayList<Automobile>` to store and manage vehicle entries
+- Building a menu-based console program to support:
+  - Adding new vehicles
+  - Listing all vehicles
+  - Removing a vehicle by ID
+  - Updating vehicle details
+- Prompting users to select vehicles by ID for update or removal
+- Offering the option to save vehicle data to a file (e.g., `C:\Temp\Autos.txt`)
+
+---
+
+## 🧠 Lessons Learned
+
+This project provided valuable hands-on experience with:
+- Java classes and constructors
+- Modular method design
+- Encapsulation and access control
+- Static variables and ID tracking
+- Try/catch exception handling
+- Preparing code for user-driven applications
+
+It also served as a great opportunity to experiment with flexible inputs, custom logic, and reusable design patterns, all of which will support future projects in Java or other object-oriented languages.
+
+---
+
+## 👨‍💻 Author
+
+**Timothy G. Bjorklund**  
+[GitHub Profile](https://github.com/)  
+Project: Automobile Inventory System  
+Language: Java  
