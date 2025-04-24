@@ -8,15 +8,15 @@ This project is a Java-based automobile inventory system designed to manage vehi
 
 ## 🔧 Features and Functionality
 
-### ✅ Core Class Structure
+### Core Class Structure
 - **Encapsulated Instance Variables** (`private`): make, model, color, year, mileage, id
 - **Static Variable**: auto-incrementing `id` using a shared `nextID` counter
 
-### ✅ Constructors
+### Constructors
 - **Default Constructor** – Initializes a vehicle with blank/default values
 - **Parameterized Constructor** – Creates a vehicle using provided values
 
-### ✅ Methods Implemented
+### Methods Implemented
 - `addNewVehicle(...)` – Adds new data to the vehicle
 - `updateVehicle(...)` – Replaces vehicle attributes with new values
 - `removeVehicle(id)` – Clears vehicle data only if the ID matches
@@ -43,3 +43,11 @@ Each method includes **try/catch error handling** and returns a message string t
 ---
 
 ## 🧱 File Structure
+
+vehicleinventory/
+│
+├── src/
+│   └── vehicleinventory/
+│       └── Automobile.java        # Core class for vehicle logic (constructors, methods, encapsulation)
+│
+├── README.md                      # Project overview and documentation
