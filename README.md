@@ -2,28 +2,47 @@
 
 ## Overview
 
-This project is a Java-based automobile inventory system designed to manage vehicle data using an object-oriented approach. The core class, `Automobile`, represents individual vehicles and includes functionality to add, update, remove, and list vehicle details. Each vehicle is assigned a unique ID for easy reference and manipulation. The class is structured with maintainability and modular design in mind and is ready for integration into a full inventory management system.
+This project is a Java-based automobile inventory system designed to manage vehicle data using an object-oriented approach. It consists of two main classes:
+
+- **`Automobile`** – Represents individual vehicles with functionality to store and manage their attributes.
+- **`AutomobileInventory`** – Acts as the main driver class, demonstrating how to create, update, remove, list, and optionally export vehicle data using the `Automobile` class.
+
+The system is structured for modularity and future expansion, supporting basic CRUD operations and file output for saved vehicle information.
 
 ---
 
 ## 🔧 Features and Functionality
 
 ### Core Class Structure
-- **Encapsulated Instance Variables** (`private`): make, model, color, year, mileage, id
-- **Static Variable**: auto-incrementing `id` using a shared `nextID` counter
 
-### Constructors
-- **Default Constructor** – Initializes a vehicle with blank/default values
-- **Parameterized Constructor** – Creates a vehicle using provided values
+#### `Automobile` Class
+- **Encapsulated Instance Variables** (`private`): `make`, `model`, `color`, `year`, `mileage`, `id`
+- **Static Variable**: Auto-incrementing `id` using a shared `nextID` counter
+
+#### `AutomobileInventory` Class
+- Demonstrates real-world usage of the `Automobile` class
+- Manages one or more `Automobile` objects
+- Includes console output and optional file writing (`C:\Temp\Autos.txt`)
+
+---
 
 ### Methods Implemented
+
+#### In `Automobile`:
 - `addNewVehicle(...)` – Adds new data to the vehicle
 - `updateVehicle(...)` – Replaces vehicle attributes with new values
 - `removeVehicle(id)` – Clears vehicle data only if the ID matches
 - `listVehicleInfo()` – Returns a string array of vehicle details
-- `getID()` and other getters – Return individual values for external reference
+- Getters (`getMake()`, `getModel()`, etc.) – Return individual values for external reference
 
 Each method includes **try/catch error handling** and returns a message string to indicate success or failure.
+
+#### In `AutomobileInventory`:
+- Calls the parameterized constructor to initialize a vehicle
+- Lists vehicle data and loops through the return array
+- Removes and updates a vehicle using methods from the `Automobile` class
+- Captures user input using `Scanner` to determine whether to write data to a file
+- Uses `FileWriter` with exception handling to save vehicle details to `C:\Temp\Autos.txt`
 
 ---
 
@@ -31,62 +50,62 @@ Each method includes **try/catch error handling** and returns a message string t
 
 | Concept                      | Description                                                                 |
 |-----------------------------|-----------------------------------------------------------------------------|
-| **Object-Oriented Design**  | Used classes, instance variables, and methods to encapsulate vehicle logic. |
-| **Constructors**            | Practiced both default and parameterized constructor creation.              |
+| **Object-Oriented Design**  | Designed both individual vehicle logic and system interaction.              |
+| **Constructors**            | Used both default and parameterized constructors.                           |
 | **Encapsulation**           | Protected internal variables with `private` and exposed them via getters.   |
-| **Method Design**           | Built custom methods for adding, updating, removing, and displaying data.   |
-| **Error Handling**          | Used `try-catch` blocks to gracefully handle runtime errors.                |
-| **Static Variables**        | Used a shared `nextID` to uniquely identify vehicles.                       |
-| **Code Reusability**        | Designed the class for future integration into a full inventory system.     |
-| **User-Centered Design**    | Built around user prompts, unique IDs, and method responses for clarity.    |
+| **Method Design**           | Built reusable methods for vehicle manipulation.                            |
+| **Error Handling**          | Used `try-catch` in every method and for file I/O.                          |
+| **Static Variables**        | Tracked vehicle IDs globally with an incrementing static counter.           |
+| **Console Interaction**     | Used `Scanner` to simulate user decisions (Y/N).                            |
+| **File I/O in Java**        | Used `FileWriter` to export vehicle data to a text file.                    |
+| **Code Reusability**        | Structured code for use in larger, real-world inventory systems.            |
 
 ---
 
 ## 🧱 File Structure
-
 vehicleinventory/
 │
 ├── src/
-│   └── vehicleinventory/
-│       └── Automobile.java        # Core class for vehicle logic (constructors, methods, encapsulation)
+│ └── vehicleinventory/
+│ ├── Automobile.java # Core class with constructors, getters, and vehicle methods
+│ └── AutomobileInventory.java # Final program demonstrating vehicle interaction and file writing
 │
-├── README.md                      # Project overview and documentation
+├── README.md # Project documentation
 
----
+## 🔮 Final Project Capabilities
 
-## 🔮 Future Development
+The final version of this project supports:
 
-This project is designed to serve as the backend for a larger vehicle management system. Future features and expansions may include:
+- Full CRUD-like logic:
+  - Create and add a vehicle
+  - List vehicle details
+  - Update vehicle data
+  - Remove a vehicle (by ID)
+- Prompt to write vehicle data to a file
+- Console output using formatted loops
+- User decision input with `Scanner`
 
-- Creating an `AutomobileInventory` class to manage multiple vehicles
-- Using an `ArrayList<Automobile>` to store and manage vehicle entries
-- Building a menu-based console program to support:
-  - Adding new vehicles
-  - Listing all vehicles
-  - Removing a vehicle by ID
-  - Updating vehicle details
-- Prompting users to select vehicles by ID for update or removal
-- Offering the option to save vehicle data to a file (e.g., `C:\Temp\Autos.txt`)
+**Example Output File Path**:  
+`C:\Temp\Autos.txt`
 
 ---
 
 ## 🧠 Lessons Learned
 
-This project provided valuable hands-on experience with:
-- Java classes and constructors
-- Modular method design
-- Encapsulation and access control
-- Static variables and ID tracking
-- Try/catch exception handling
-- Preparing code for user-driven applications
+This project provided hands-on experience with:
 
-It also served as a great opportunity to experiment with flexible inputs, custom logic, and reusable design patterns, all of which will support future projects in Java or other object-oriented languages.
+- Object-oriented Java fundamentals
+- Transitioning logic from Python to Java
+- Designing a class for real-world use cases
+- Exception handling for both user logic and I/O
+- Console-based and file-based outputs
+
+It also confirmed Java as a language that aligns with logical structure and clarity, helping develop confidence and capability in backend program design.
 
 ---
 
 ## 👨‍💻 Author
 
 **Timothy G. Bjorklund**  
-[GitHub Profile](https://github.com/)  
 Project: Automobile Inventory System  
 Language: Java  
